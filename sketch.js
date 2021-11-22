@@ -69,10 +69,6 @@ function setup() {
   gameOver.scale = 0.5;
   restart.scale = 0.5;
 
-  //Visibilidad de objeto restar y game over
-  gameOver.visible = false;
-  restart.visible = false;
-
   //crear grupos de obstáculos y nubes
   obstaclesGroup = new Group();
   cloudsGroup = new Group();
@@ -97,6 +93,9 @@ function draw() {
   if(gameState === PLAY){
     //Puntuación
     score = score + Math.round(getFrameRate()/30);
+    //Visibilidad de objeto restar y game over
+    gameOver.visible = false;
+    restart.visible = false;
 
     //Velocidad del suelo
     ground.velocityX = -(4 + 3* score/100)
@@ -225,7 +224,6 @@ function reset(){
   //Visibilidad de los Sprites 
   gameOver.visible = false;
   reset.visible = false;
-
   //Destrucción de los Grupos de Sprites
   obstaclesGroup.destroyEach();
   cloudsGroup.destroyEach();
