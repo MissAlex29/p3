@@ -223,7 +223,7 @@ function reset(){
 
   //Visibilidad de los Sprites 
   gameOver.visible = false;
-  reset.visible = false;
+  restart.visible = false;
   //Destrucción de los Grupos de Sprites
   obstaclesGroup.destroyEach();
   cloudsGroup.destroyEach();
